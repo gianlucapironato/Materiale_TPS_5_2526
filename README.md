@@ -3,9 +3,6 @@ title: "Materiale TPS - Classi 5IA e 5IB"
 author: "Prof. Gianluca Pironato"
 school: "Istituto di Istruzione Superiore Statale Alessandro Greppi"
 year: "Anno Scolastico 2024/2025"
-contact:
-    - email: "gianluca dot pironato at issgreppi dot it"
-    - email: "gianluca dot pironato at liceoagnesi dot edu dot it"
 ---
 
 # Materiale TPS - Classi 5IA e 5IB
