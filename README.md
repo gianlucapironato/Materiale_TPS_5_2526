@@ -11,6 +11,11 @@ Benvenuti nel repository del corso di **Tecnologie e Progettazione di Sistemi In
 
 In questo spazio verranno pubblicati materiali didattici, esercizi e compiti risolti utili per l'apprendimento durante l'anno scolastico. Tutti i file sono organizzati in cartelle riferite alle date in cui è stato trattato l'argomento.
 
+## Per studiare
+
+- **HTML**: [W3Schools - HTML Tutorial](https://www.w3schools.com/css/)
+- **CSS**: [W3Schools - CSS Tutorial](https://www.w3schools.com/css/)
+
 ## Utilizzo
 
 - **Accesso**: è possibile clonare il repository o scaricare i singoli file necessari.
