@@ -1,4 +1,3 @@
-```
 ---
 title: "Materiale TPS - Classi 5IA e 5IB"
 author: "Prof. Gianluca Pironato"
@@ -25,4 +24,3 @@ In questo spazio verranno pubblicati materiali didattici, esercizi e compiti ris
 Per qualsiasi informazione o chiarimento:
 - **Email**: gianluca\[dot\]pironato \[at\] issgreppi\[dot\]it
 - **Email**: gianluca\[dot\]pironato \[at\] liceoagnesi\[dot\]edu\[dot\]it
-```
