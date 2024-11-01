@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portale classe quinta</title>
+    <style>
+        body {
+            background-image: -ms-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: -moz-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: -o-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: -webkit-gradient(radial, center center, 0, center center, 501, color-stop(0, #FFFFFF), color-stop(1, #00A3EF));
+            background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(124, 117, 117);
+        }
+        #main {
+            width: 100%;
+            text-align: center;
+        }
+        #main > h1, #main > h2 {
+            font-weight: lighter;
+        }
+        #mainForm {
+            width: 25%;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        #mainForm > * { 
+            display: block;/*senza questa, non si riescono a centrare gli elementi con la regola sotto! */
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #mainForm > input.textField {
+            width: 90%;
+            height: 35px;
+            border: 1px solid gray;
+            outline: none; /*altrimenti c'è un altro bordo che sovrascrive il nostro in fase di focus*/
+        }
+
+        #mainForm > input.textField:focus {
+            border: 1px solid yellow;
+        }
+
+        #loginBtn {
+            padding: 10px;
+            width: 45%;
+            color: white;
+            background-color: cornflowerblue;
+            border: 1px solid rgb(50, 102, 197);
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Portale classe 5<sup>a</sup></h1>
+        <h2>Sito riservato ad alunni e professori</h2>
+        <form action="index.html" method="post" id="mainForm">
+            <label for="usernameField">Inserisci i tuoi dati per accedere:</label>
+            <input class="textField" type="text" name="username" id="usernameField" placeholder="Inserisci il tuo username" required>
+            <input class="textField" type="password" name="password" id="passwordField" placeholder="Inserisci la tua password" required>
+            <input type="submit" value="Login" id="loginBtn">
+        </form>
+    </div>
+</body>
+</html>

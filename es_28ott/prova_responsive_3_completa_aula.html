@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout responsive di prova</title>
+    <style>
+        * {
+            box-sizing: border-box; /* il bordo viene conteggiato nella larghezza dell'elemento */
+        }
+        #header {
+            background-color: blueviolet;
+            color: white;
+        }
+        #main {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        #navBar li {
+            background-color: royalblue;
+            color: white;
+            margin: 5px;
+        }
+        #mainArticle {
+            background-color: white;
+            color: black;
+            flex: 50%;
+            padding: 10px;
+        }
+        #sideBar {
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+        }
+        #footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+        @media screen and (max-width: 768px){
+            #main {
+                flex-wrap: wrap;
+            }
+            #sideBar {
+                flex: 100%;
+            }
+        }
+        @media screen and (max-width: 600px){
+            #main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">Header</header>
+    <main id="main">
+        <nav id="navBar">
+            <ul>
+                <li>Option #1</li>
+                <li>Option #2</li>
+                <li>Option #3</li>
+            </ul>
+        </nav> <!-- avrebbe più senso che stesse nell'header, ma risulta più comodo metterla qui per disporla in modo adattivo -->
+        <article id="mainArticle">
+            <h1>Title</h1>
+            <p>Article</p>
+        </article>
+        <aside id="sideBar">
+            <section>
+                <h2>What?</h2>
+                <p>words</p>
+            </section>
+            <section>
+                <h2>Where?</h2>
+                <p>words</p>
+            </section>
+            <section>
+                <h2>How?</h2>
+                <p>words</p>
+            </section>
+        </aside>
+    </main>
+    <footer id="footer">
+        <p>info & contacts</p>
+    </footer>
+</body>
+</html>

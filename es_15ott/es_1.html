@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <form action="" method="POST">
+      <div>
+        <label for="question1" id="l1">How satisfied are you with our service?</label><br>
+      </div>
+      <input type="radio" id="very_satisfied" name="satisfaction" value="very_satisfied" required>
+      <label  for="very_satisfied">Very Satisfied</label><br>
+      <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+      <label for="satisfied">Satisfied</label><br>
+      <input type="radio" id="neutral" name="satisfaction" value="neutral">
+      <label  for="neutral">Neutral</label><br>
+      <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied">
+      <label for="dissatisfied">Dissatisfied</label><br>
+      <input type="radio" id="very_dissatisfied" name="satisfaction" value="very_dissatisfied">
+      <label for="very_dissatisfied">Very Dissatisfied</label><br><br>
+  
+      <label for="comments">Additional Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Not compulsory"></textarea><br><br>
+  
+      <label for="services">Which of our services have you used? (Select all that apply)</label><br>
+      <select id="services" name="services" required multiple size="3">
+        <option value="service1">Service 1</option>
+        <option value="service2">Service 2</option>
+        <option value="service3">Service 3</option>
+      </select><br><br>
+  
+      <label for="quality">Rate the quality of our service:</label><br>
+      <input type="range" id="quality" name="quality" min="1" max="10" step="1" required><br><br>
+  
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+  
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
