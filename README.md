@@ -13,7 +13,7 @@ In questo spazio verranno pubblicati materiali didattici, esercizi e compiti ris
 
 ## Per studiare
 
-- **HTML**: [W3Schools - HTML Tutorial](https://www.w3schools.com/css/)
+- **HTML**: [W3Schools - HTML Tutorial](https://www.w3schools.com/html/)
 - **CSS**: [W3Schools - CSS Tutorial](https://www.w3schools.com/css/)
 
 ## Utilizzo
