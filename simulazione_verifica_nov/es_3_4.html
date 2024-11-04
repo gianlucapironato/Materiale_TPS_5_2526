@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .responsive {   /* primo punto es. 4 */
+            width: 50%;
+            margin: 0 auto;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: justify;
+        }
+        p.article-script + img.big { /* secondo punto es. 4 */
+            height: 500px;
+            width: 500px;
+        }
+        div.main > p.article-script:hover {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1" class="main light-theme responsive">
+        <h2 class="article-title">HTML base</h2>
+        <p id="p1" class="article-script">HTML è un linguaggio di markup per ipertesti...</p>
+        <img src="intro.png" alt="immagine introduttiva" title="immagine introduttiva" id="img1" class="big">
+    </div>
+</body>
+</html>
