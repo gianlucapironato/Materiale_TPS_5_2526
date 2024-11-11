@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: olive;
+            color: white;
+        }
+        form.responsive {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        form.main {
+            background-color: white;
+            color: gray;
+        }
+        #formContainer {
+            width: 50%;
+            margin: 0 auto;
+        }
+        #loginForm > a {
+            padding: 5px;
+            background-color: olive;
+            border: 1px solid gray;
+            color: white;
+        }
+        #loginForm > input {
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            #formContainer {
+                width: 90%;
+            }
+            form.responsive {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="formContainer">
+        <h2>Accedi</h2>
+        <form id="loginForm" class="main responsive" method="POST" action="/home/index.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="inputField" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="inputField" name="password" required>
+            
+            <input type="submit" value="Login" id="loginBtn">
+            <a id="signup" href="/home/signup.php">Registrati</a>
+        </form>
+    </div>    
+</body>
+</html>

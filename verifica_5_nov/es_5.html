@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+div.parent {
+    width: 200px; height: 600px;
+    background-color: yellow;
+}
+div.children {
+    margin: 25px;
+    background-color: white;
+}
+div.parent:hover > div.children {
+    display: none;
+}
+</style>
+</head>
+<body>
+<div class="parent">
+    <div class="children">1</div>
+    <div class="children">2</div>
+    <div class="children">3</div>
+</div>
+</body>
+</html>
