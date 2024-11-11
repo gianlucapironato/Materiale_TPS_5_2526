@@ -20,6 +20,7 @@ In questo spazio verranno pubblicati materiali didattici, esercizi e compiti ris
 
 - **HTML**: [W3Schools - HTML Tutorial](https://www.w3schools.com/html/)
 - **CSS**: [W3Schools - CSS Tutorial](https://www.w3schools.com/css/)
+- **JS**: [W3Schools - JS Tutorial](https://www.w3schools.com/js/default.asp)
 
 ## Contatti
 
