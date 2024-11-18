@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 1</title>
+    <script>
+        function inserisciEFiltra(){
+            
+            document.getElementById("dispari").innerHTML = ""
+
+            do{
+                 n = parseInt(prompt("Inserisci il numero di valori da controllare: "));
+            } while(isNaN(n) || n<=0)
+
+            const numeri = []
+            for(let j=0;j<n;j++){
+                numeri.push(parseInt(prompt("Inserisci il valore di posto " + j)));
+            }
+
+            for(let i=0;i<numeri.length;i++){
+                if (numeri[i] % 2 != 0){
+                    document.getElementById("dispari").innerHTML += numeri[i] + "<br>";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Numeri dispari:</h1>
+    <p id="dispari"></p>
+    <button onclick="inserisciEFiltra()">Avvia esercizio</button>
+</body>
+</html>

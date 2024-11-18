@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 3</title>
+</head>
+<body>
+    <span id="binario"></span>
+    <script>
+        do{
+            n = parseInt(prompt("Inserisci il numero da convertire: "));
+            } while(isNaN(n) || n<=0)
+
+        let bin = ""
+        while(n>0){
+            r = n % 2;
+            bin = r + bin;
+            n = parseInt(n / 2);
+        }
+
+        document.getElementById("binario").innerHTML = bin;
+    </script>
+</body>
+</html>
