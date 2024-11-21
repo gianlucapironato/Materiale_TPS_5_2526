@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolatore di Media</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #numeri {
+            margin-top: 20px;
+        }
+        #media {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calcolatore di Media</h1>
+
+    <label for="numeroInput">Inserisci un numero:</label>
+    <input type="number" id="numeroInput">
+    <button id="aggiungi" onclick="aggNumEMedia()">Aggiungi</button>
+
+    <div id="numeri">
+        <h2>Numeri:</h2>
+        <ul id="listaNumeri"></ul>
+    </div>
+
+    <div id="media">
+        <h2>Media:</h2>
+        <span id="valoreMedia">0</span>
+    </div>
+
+    <script>
+        const numeroInput = document.getElementById('numeroInput');
+        const listaNumeri = document.getElementById('listaNumeri');
+        const valoreMedia = document.getElementById('valoreMedia');
+
+        console.log(numeroInput)
+
+        let numeri = [];
+
+        function aggNumEMedia() {
+            const valore = parseFloat(numeroInput.value);
+            if (!isNaN(valore)) {
+                numeri.push(valore);
+
+                listaNumeri.innerHTML += "<li>"+valore+"</li>"
+
+                let somma = 0;
+                for (let i = 0; i < numeri.length; i++) {
+                    somma += numeri[i];
+                }
+                const media = somma / numeri.length;
+                valoreMedia.textContent = media;
+
+                numeroInput.value = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
