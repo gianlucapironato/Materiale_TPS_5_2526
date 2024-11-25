@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 1</title>
+    <script>
+        function contaLettere_a(par) {
+            const text = par.textContent;
+            let conta_a = 0;
+            for(let j=0;j<text.length;j++){
+                if(text[j] == 'a'){
+                    conta_a++;
+                }
+            }
+            alert('Il paragrafo contiene ' + conta_a + ' lettere "a"');
+        }
+        function contaLettere_scelta(par) {
+            const char = prompt('Inserisci la lettera da cercare'); //eventualmente controllare che non siano stringhe da più di 1 char
+            const text = par.textContent;
+            let conta_char = 0;
+            for(let j=0;j<text.length;j++){
+                if(text[j] == char){
+                    conta_char++;
+                }
+            }
+            alert('Il paragrafo contiene ' + conta_char + ' lettere "' + char + '"'); 
+        }
+    </script>
+</head>
+<body>
+    <h1>Prova su eventi, ascoltatori e gestori</h1>
+    <p>JavaScript è stato creato da Brendan Eich nel 1995 durante il suo lavoro presso Netscape Communications Corporation ed è diventato uno dei linguaggi di programmazione più diffusi per lo sviluppo web.</p>
+    <p>Gli eventi in JavaScript sono azioni o occorrenze che si verificano nel browser, come il clic di un pulsante, il caricamento di una pagina o la pressione di un tasto. Gli sviluppatori possono utilizzare gli eventi per eseguire funzioni specifiche in risposta a queste azioni, migliorando l'interattività e la dinamicità delle pagine web.</p>
+    <p>I moderni browser web offrono un ampio supporto per JavaScript, consentendo agli sviluppatori di creare esperienze utente interattive e dinamiche. Questo supporto include l'esecuzione di script, la manipolazione del DOM, la gestione degli eventi e l'accesso alle API web. Grazie a questo, JavaScript è diventato una parte fondamentale dello sviluppo web moderno.</p>
+    <script>
+        // Aggiungo gli ascoltatori sugli elementi p
+        var paragraphs = document.getElementsByTagName('p');
+        for (let i=0;i<paragraphs.length;i++) {
+            paragraphs[i].addEventListener('click', function() {
+                contaLettere_a(paragraphs[i]);   //chiamo il gestore dell'evento click passando l'elemento paragrafo stesso come parametro
+            });
+        }
+    </script>
+</body>
+</html>
