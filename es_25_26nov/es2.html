@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 2</title>
+    <script>
+        let conta_Inversioni = 0;
+        function giraTesto(par){
+            //primo modo molto meccanico
+            /*let testo = par.innerHTML;
+            let nuovoTesto = "";
+            for(let i = testo.length - 1; i >= 0; i--){
+                nuovoTesto += testo[i];
+            }
+            par.innerHTML = nuovoTesto;*/
+
+            //secondo modo con i metodi
+            let testo = par.innerHTML;
+            let testoArray = testo.split("");
+            testoArray.reverse();
+            let nuovoTesto = testoArray.join("");
+            par.innerHTML = nuovoTesto;
+        }
+        function giraTesto_max3(par){
+            if (conta_Inversioni<3){
+
+                conta_Inversioni++; //incremento il contatore
+
+                let testo = par.innerHTML;
+                let testoArray = testo.split("");
+                testoArray.reverse();
+                let nuovoTesto = testoArray.join("");
+                par.innerHTML = nuovoTesto;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Prova metodi reverse, split e join</h1>
+    <!-- N.B. aggiungo manualmente ascoltatore a un solo paragrafo... sarebbe meglio predisporre ciclo che lo faccia con tutti i tag p della pagina-->
+    <p onclick="giraTesto_max3(this)">Il solstizio d'inverno è un evento astronomico che si verifica quando uno dei poli della Terra ha la sua massima inclinazione lontano dal Sole. Questo accade due volte all'anno, una volta in ciascun emisfero. Nell'emisfero settentrionale, il solstizio d'inverno si verifica intorno al 21 dicembre, mentre nell'emisfero meridionale si verifica intorno al 21 giugno. Durante il solstizio d'inverno, il giorno è il più corto dell'anno e la notte è la più lunga.</p>
+</body>
+</html>
