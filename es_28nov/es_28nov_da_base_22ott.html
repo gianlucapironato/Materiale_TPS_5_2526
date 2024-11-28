@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portale classe quinta</title>
+    <style>
+        body {
+            background-image: -ms-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: -moz-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: -o-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: -webkit-gradient(radial, center center, 0, center center, 501, color-stop(0, #FFFFFF), color-stop(1, #00A3EF));
+            background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            background-image: radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(124, 117, 117);
+        }
+        #main {
+            width: 100%;
+            text-align: center;
+        }
+        #main > h1, #main > h2 {
+            font-weight: lighter;
+        }
+        #mainForm, #secondaryForm { /* aggiunto selettore anche per altro form */
+            width: 25%;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+        }
+        #secondaryForm > *, #mainForm > * { /* aggiunto selettore anche per altro form */
+            display: block;/*senza questa, non si riescono a centrare gli elementi con la regola sotto! */
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #secondaryForm > input.textField, #mainForm > input.textField { /* aggiunto selettore anche per altro form */
+            width: 90%;
+            height: 35px;
+            border: 1px solid gray;
+            outline: none; /*altrimenti c'è un altro bordo che sovrascrive il nostro in fase di focus*/
+        }
+
+        #secondaryForm > input.textField:focus, #mainForm > input.textField:focus { /* aggiunto selettore anche per altro form */
+            border: 1px solid yellow;
+        }
+
+        #noAccountBtn, #loginBtn, #signupBtn, #checkBtn { /*regole aggiunte anche per altri bottoni*/
+            padding: 10px;
+            width: 45%;
+            color: white;
+            background-color: cornflowerblue;
+            border: 1px solid rgb(50, 102, 197);
+            font-weight: bold;
+        }
+
+    </style>
+    <script>
+        function signupNeeded() {
+            // Nascondo il form principale
+            document.getElementById("mainForm").style.display = "none";
+            // Mostro il form secondario
+            document.getElementById("secondaryForm").style.display = "block";
+        }
+        function check() {
+            const form = document.getElementById("secondaryForm");
+            const name = form.querySelector("#nameFieldSignup").value;
+            const surname = form.querySelector("#surnameFieldSignup").value;
+            const username = form.querySelector("#usernameFieldSignup").value;
+            const password = form.querySelector("#passwordFieldSignup").value;
+            if (name && surname && username && password) {
+                
+                // Controllo requisiti
+                let valido = true;
+                if (password.length < 8) {
+                    alert("Password troppo corta!");
+                    valido = false;
+                }
+                if (username == "admin") {
+                    alert("Username non valido!");
+                    valido = false;
+                }
+                else if (parseInt(username[0])) {
+                    alert("Username non può iniziare con un numero!");
+                    valido = false;
+                }
+
+                //se tutto va bene, mostro bottone
+                if (valido) {
+                    document.getElementById("signupBtn").style.display = "block";
+                }
+            } else {
+                // Altrimenti, popup all'utente
+                alert("Compila tutti i campi!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h1>Portale classe 5<sup>a</sup></h1>
+        <h2>Sito riservato ad alunni e professori</h2>
+        <form action="index.html" method="post" id="mainForm">
+            <label for="usernameField">Inserisci i tuoi dati per accedere:</label>
+            <input class="textField" type="text" name="username" id="usernameField" placeholder="Inserisci il tuo username" required>
+            <input class="textField" type="password" name="password" id="passwordField" placeholder="Inserisci la tua password" required>
+            <input type="submit" value="Login" id="loginBtn">
+            <!-- Prima aggiunta: bottone e regole CSS sopra (non sono essenziali...) -->
+            <input type="button" value="Non ho un account" id="noAccountBtn" onclick="signupNeeded()">
+        </form>
+
+        <!-- Seconda aggiunta: l'altro form, ma nascosto di default -->
+        <form action="signup.html" method="post" id="secondaryForm" style="display: none;">
+            <label for="nameField">Inserisci i tuoi dati per registrarti:</label>
+            <input class="textField" type="text" name="name" id="nameFieldSignup" placeholder="Inserisci il tuo nome" required>
+            <input class="textField" type="text" name="surname" id="surnameFieldSignup" placeholder="Inserisci il tuo cognome" required>
+            <input class="textField" type="text" name="username" id="usernameFieldSignup" placeholder="Inserisci il tuo username" required>
+            <input class="textField" type="password" name="password" id="passwordFieldSignup" placeholder="Inserisci la tua password" required>
+            <input type="button" value="Valida" id="checkBtn" onclick="check()">
+            <!-- Il bottone di registrazione di default è nascosto -->
+            <input type="submit" value="Signup" id="signupBtn" style="display: none;">
+        </form>
+    </div>
+</body>
+</html>
