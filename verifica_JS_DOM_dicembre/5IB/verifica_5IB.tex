@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\graphicspath{ {./images/} }
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Large Verifica di \\ Tecnologie e progettazione di sistemi informatici e di telecomunicazioni}
+\end{center}
+
+\begin{flushleft}
+Nome Cognome: \underline{\hspace{5cm}} \quad Classe: \underline{\hspace{3cm}} \quad Data: \underline{\hspace{3cm}}
+\end{flushleft}
+
+\section*{Esercizio 1}
+
+\textbf{Scrivi il codice JS essenziale per implementare, in ordine, le seguenti:}
+
+\begin{itemize}
+    \item una funzione \texttt{clean} che riceva un parametro stringa \texttt{s} e un parametro \texttt{x} e provveda a restituire la versione pulita di \texttt{s} (in cui non compaiono mai occorrenze di \texttt{x}, che si ipotizza essere un singolo carattere);
+    \item una funzione \texttt{cleanArr} che, ricevuto un array di stringhe come parametro e un parametro \texttt{x}, restituisca un nuovo array contenente tutte le stringhe pulite da \texttt{x};
+    \item una funzione \texttt{isCleanArr} che, ricevuto un array di stringhe come parametro e un parametro \texttt{x}, restituisca \texttt{true} se non ci sono elementi da pulire, \texttt{false} altrimenti.
+\end{itemize}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+
+\section*{Esercizio 2}
+
+\textbf{Osserva il codice riportato sotto e rispondi alle domande}
+
+\begin{lstlisting}
+    function boh(numbers, d) {
+        let r = 0;
+        for (let i = d; i < numbers.length; i++) {
+            let r += numbers[i];
+        }
+        return r;
+    }
+\end{lstlisting}
+
+\begin{itemize}
+    \item Qual è l'errore che va obbligatoriamente corretto perché la funzione possa svolgere ciò per cui è stata scritta?
+    \item Una volta corretta, qual è il comportamento implementato da questa funzione? Spiega.
+    \item Parlando di DOM, se \texttt{d} fosse il riferimento a un tag $<span>$ con id "val", cosa dovresti modificare nella funzione per ottenere lo stesso comportamento?
+\end{itemize}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+\section*{Esercizio 3}
+
+\textbf{Parti dal codice HTML qui riportato e soddisfa le richieste presenti sotto:}
+
+\begin{lstlisting}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce</title>
+</head>
+<body>
+    <h1>Catalogo Prodotti</h1>
+    <p id="descrizione">Sezione dei prodotti disponibili.</p>
+    <p class="highlight">Offerte speciali!</p>
+    <div>
+        <ol id="elenco">
+            <li>Prodotto A</li>
+            <li class="offerta">Prodotto B</li>
+            <li id="prodotto3">Prodotto C</li>
+        </ol>
+        <span id="risultato"></span>
+    </div>
+    <button onclick="faiQualcosa()">Aggiorna</button>
+    <script>
+        function faiQualcosa() {
+            // La risposta viene inserita qui! 
+            // Nessuna modifica alle altre righe necessaria
+        }
+    </script>
+</body>
+</html>
+\end{lstlisting}
+
+\begin{itemize}
+    \item Scrivi il codice JS che inseriresti nel corpo della funzione per visualizzare, nell'elemento con id "risultato", il numero di paragrafi presenti nella pagina.
+    \item Scrivi il codice JS che inseriresti nel corpo della funzione per modificare, a piacere, almeno tre proprietà CSS dei figli dell'elemento con id "elenco".
+\end{itemize}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+\section*{Esercizio 4}
+
+\textbf{Sempre in riferimento al codice HTML dell'esercizio 3, aggiungendo un secondo tag script subito dopo quello già presente, soddisfa la seguente descrizione utilizzando solo JS:}
+
+\bigbreak
+
+si vuole aggiungere un div di dimensioni 100x100 pixel contenente la scritta "magico" che faccia sparire i figli della lista con id "elenco" quando l'utente passa il mouse sopra alla sua area (una volta fuori dall'area del div, gli elementi della lista tornano visibili).
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+\section*{Esercizio 5}
+
+\textbf{Immagina una pagina HTML contenente una lista di questo tipo:}
+
+\begin{lstlisting}
+[...]
+<ul id="incipit">
+    <li>Nel mezzo del cammin di nostra vita</li>
+    <li>Quel ramo del lago di Como</li>
+    <li>Molti anni dopo, di fronte al plotone di esecuzione</li>
+    <li>Cantami, o Diva, del pelide Achille</li>
+    <!-- potrebbe continuare ... -->
+</ul>
+[...]
+\end{lstlisting}
+
+\textbf{Implementa uno script in grado di sostituire ogni incipit della lista con il corrispondente numero di spazi contenuti. Potresti anche aiutarti con le funzioni scritte nell'esercizio 1.}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+
+
+% Aggiungi ulteriori sezioni o esercizi come necessario
+
+\end{document}

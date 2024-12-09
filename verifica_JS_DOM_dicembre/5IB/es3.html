@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce</title>
+</head>
+<body>
+    <h1>Catalogo Prodotti</h1>
+    <p id="descrizione">Sezione dei prodotti disponibili.</p>
+    <p class="highlight">Offerte speciali!</p>
+    <div>
+        <ol id="elenco">
+            <li>Prodotto A</li>
+            <li class="offerta">Prodotto B</li>
+            <li id="prodotto3">Prodotto C</li>
+        </ol>
+        <span id="risultato"></span>
+    </div>
+    <button onclick="faiQualcosa()">Aggiorna</button>
+    <script>
+        function faiQualcosa() {
+            // La risposta viene inserita qui! 
+            // Nessuna modifica alle altre righe necessaria
+
+            /*Prima richiesta
+            var paragrafi = document.getElementsByTagName("p").length;
+            document.getElementById("risultato").innerHTML = paragrafi;
+            */
+
+            /*Seconda richiesta
+            var elenco = document.getElementById("elenco");
+            var figli = elenco.children;
+            for (var i = 0; i < figli.length; i++) {
+                figli[i].style.color = "red";
+                figli[i].style.fontWeight = "bold";
+                figli[i].style.fontSize = "20px";
+            }*/
+        }
+    </script>
+</body>
+</html>
+<!-- Per valutazione: 3 punti per ogni richiesta (0 se assente, 1 se cè qualche tentativo di uso DOM, 2 se strategia corretta ma con errori, 3 se completa)-->

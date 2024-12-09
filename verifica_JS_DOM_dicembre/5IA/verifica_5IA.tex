@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\graphicspath{ {./images/} }
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+
+\begin{document}
+
+\begin{center}
+\textbf{\Large Verifica di \\ Tecnologie e progettazione di sistemi informatici e di telecomunicazioni}
+\end{center}
+
+\begin{flushleft}
+Nome Cognome: \underline{\hspace{5cm}} \quad Classe: \underline{\hspace{3cm}} \quad Data: \underline{\hspace{3cm}}
+\end{flushleft}
+
+\section*{Esercizio 1}
+
+\textbf{Scrivi il codice JS essenziale per implementare, in ordine, le seguenti:}
+
+\begin{itemize}
+    \item una funzione \texttt{contaVocali} che restituisca il numero totale di vocali minuscole o maiuscole di una stringa ricevuta come parametro;
+    \item una funzione \texttt{maxVocali} che, ricevute due stringhe come parametri, restituisca \texttt{true} se la prima contiene più vocali della seconda, \texttt{false} altrimenti;
+    \item una funzione \texttt{arrMaxVocali} che, ricevuto un array di stringhe come parametro, restituisca la stringa con più vocali di tutte le altre.
+\end{itemize}
+
+\textbf{N.B. per semplicità, si ignorino le vocali accentate}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+\section*{Esercizio 2}
+
+\textbf{Osserva il codice riportato sotto e rispondi alle domande}
+
+\begin{lstlisting}
+    function makeSmth(myWords, yourWord) {
+        const c = 0;
+        for (let d=0; d < myWords.length; d++) {
+            if (myWords[d].length < yourWord.length) {
+                c++;
+            }
+        }
+        return c;
+    }
+\end{lstlisting}
+
+\begin{itemize}
+    \item Qual è l'errore che va obbligatoriamente corretto perché la funzione possa svolgere ciò per cui è stata scritta?
+    \item Una volta corretta, qual è il comportamento implementato da questa funzione? Spiega
+    \item Parlando di DOM, se \texttt{yourWord} fosse il riferimento a un campo di input testuale, cosa dovresti modificare nella funzione per ottenere lo stesso comportamento?
+\end{itemize}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+\section*{Esercizio 3}
+
+\textbf{Parti dal codice HTML qui riportato e soddisfa le richieste presenti sotto:}
+
+\begin{lstlisting}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <p id="paragrafo1">Un paragrafo.</p>
+    <p class="testo">Un altro paragrafo.</p>
+    <div>
+        <ul>
+            <li>Elemento 1</li>
+            <li class="elemento">Elemento 2</li>
+            <li id="elemento3">Elemento 3</li>
+        </ul>
+        <span id="output"></span>
+    </div>
+    <button onclick="testFunzione()">Clicca qui</button>
+    <script>
+        function testFunzione() {
+            // La risposta viene inserita qui! 
+            // Nessuna modifica alle altre righe necessaria
+        }
+    </script>
+</body>
+</html>
+\end{lstlisting}
+
+\begin{itemize}
+    \item scrivi il codice JS che inseriresti nel corpo della funzione di test per stampare, nell'elemento con id "output", il numero di $<li>$ con classe "elemento" della pagina;
+    \item scrivi il codice JS che inseriresti nel corpo della funzione di test per modificare, a piacere, almeno tre proprietà CSS dell'elemento con id "paragrafo1".
+\end{itemize}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+
+
+\section*{Esercizio 4}
+
+\textbf{Sempre in riferimento al codice HTML dell'esercizio 3, aggiungendo un secondo tag script subito dopo quello già presente, soddisfa la seguente descrizione utilizzando solo JS:}
+
+\bigbreak
+
+si vuole un bottone contenente la scritta "Wow!" che, quando premuto, faccia sì che tutti i $<li>$ della pagina vedano il loro testo interno trasformarsi in un collegamento ipertestuale a https://www.w3schools.com.
+
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+\section*{Esercizio 5}
+
+\textbf{Immagina una pagina HTML contenente una lista di questo tipo:}
+
+\begin{lstlisting}
+[...]
+<ul id="nomi">
+    <li>Adalberto</li>
+    <li>Bartolomeo</li>
+    <li>Cipriano</li>
+    <li>Domenico</li>
+    <li>Evaristo</li>
+    <li>Ferdinando</li>
+    <li>Gerolamo</li>
+    <li>Ludovico</li>
+    <li>Olimpio</li>
+    <li>Quintino</li>
+    <!-- potrebbe continuare ... -->
+</ul>
+[...]
+\end{lstlisting}
+
+\textbf{Implementa uno script in grado di riordinare e riscrivere il contenuto della lista, qualsiasi esso sia e non solo per i nomi sopra, sulla base del numero di vocali contenute in ciascun elemento (es. dal nome con più vocali a quello con meno vocali). Puoi ovviamente riutilizzare le funzioni scritte nell'esercizio 1.}
+
+\begin{flushright}\textbf{Punteggio:} \underline{\hspace{1cm}}/6\end{flushright}
+
+% Aggiungi ulteriori sezioni o esercizi come necessario
+
+\end{document}

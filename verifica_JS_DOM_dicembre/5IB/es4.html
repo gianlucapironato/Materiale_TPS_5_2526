@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce</title>
+</head>
+<body>
+    <h1>Catalogo Prodotti</h1>
+    <p id="descrizione">Sezione dei prodotti disponibili.</p>
+    <p class="highlight">Offerte speciali!</p>
+    <div>
+        <ol id="elenco">
+            <li>Prodotto A</li>
+            <li class="offerta">Prodotto B</li>
+            <li id="prodotto3">Prodotto C</li>
+        </ol>
+        <span id="risultato"></span>
+    </div>
+    <script>
+        function faiQualcosa() {
+            // Nell'esercizio 4 non serve questa!
+        }
+    </script>
+    <!-- Inizia qui la risposta -->
+    <script>
+
+        //creo il div
+        const div = document.createElement("div");
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.innerHTML = "magico";
+        document.body.appendChild(div);
+
+        //aggiungo il gestore dell'evento
+        div.addEventListener("mouseover", function() {
+            const elenco = document.getElementById("elenco");
+            for (let i = 0; i < elenco.children.length; i++) {
+                elenco.children[i].style.display = "none";
+            }
+        });
+
+        div.addEventListener("mouseout", function() {
+            const elenco = document.getElementById("elenco");
+            for (let i = 0; i < elenco.children.length; i++) {
+                elenco.children[i].style.display = "list-item";
+            }
+        });
+    </script>
+    <!-- Termina qui la risposta -->
+</body>
+</html>
+<!-- Per valutazione: 1 punto per div, 2 punti per gestore evento (funzione che fa sparire elenco), 3 punti per corretta associazione ascoltatore e gestore (se ci sono errori DOM si scala -0.5 ogni errore) -->

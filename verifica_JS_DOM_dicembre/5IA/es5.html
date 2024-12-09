@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Nomi</title>
+    <script src="es1.js"></script>
+</head>
+<body>
+    <h1>Nomi</h1>
+    <ul id="nomi">
+        <li>Adalberto</li>
+        <li>Bartolomeo</li>
+        <li>Cipriano</li>
+        <li>Domenico</li>
+        <li>Evaristo</li>
+        <li>Ferdinando</li>
+        <li>Gerolamo</li>
+        <li>Ludovico</li>
+        <li>Olimpio</li>
+        <li>Quintino</li>
+    </ul>
+    <button onclick="riordina()">Riordina</button>
+    <script>
+        function riordina(){
+            let ulNomi = document.getElementById("nomi");
+            let listaNomi = [];
+
+            //si potrebbe fare con map e altri metodi...
+
+            for (let i = 0; i < ulNomi.children.length; i++) {
+                listaNomi.push(ulNomi.children[i].innerText);
+            }
+
+            let listaNomiOrdinata = [];
+            while (listaNomi.length > 0) {
+                let max = arrMaxVocali(listaNomi);
+                listaNomi.splice(listaNomi.indexOf(max),1);
+                listaNomiOrdinata.push(max);
+            }
+
+            ulNomi.innerHTML = "";
+
+            for (let i = 0; i < listaNomiOrdinata.length; i++) {
+                let li = document.createElement("li");
+                li.innerText = listaNomiOrdinata[i];
+                ulNomi.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
+<!--
+Per soluzione: 0 punti se assente, 3 punti se presente tentativo che denota strategia corretta, 4/5 punti se corretto con errori, 6 punti se corretto senza errori
+-->

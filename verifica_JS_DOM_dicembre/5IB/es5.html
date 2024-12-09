@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="es1.js"></script>
+</head>
+<body>
+    <ul id="incipit">
+        <li>Nel mezzo del cammin di nostra vita</li>
+        <li>Quel ramo del lago di Como</li>
+        <li>Molti anni dopo, di fronte al plotone di esecuzione</li>
+        <li>Cantami, o Diva, del pelide Achille</li>
+        <!-- potrebbe continuare ... -->
+    </ul>
+    <button onclick="scriviNSpazi()">Scrivi numero spazi</button>
+    <script>
+        function scriviNSpazi(){
+            let ulInc = document.getElementById("incipit");
+            let listaInc = [];
+            let listaIncPulita = [];
+
+            //si potrebbe fare con map e altri metodi...
+            for (let i = 0; i < ulInc.children.length; i++) {
+                listaInc.push(ulInc.children[i].innerText);
+                listaIncPulita.push(clean(ulInc.children[i].innerText," "));
+            }
+
+            //creo array con numero spazi
+            let nSpazi = [];
+            for (let i = 0; i < listaInc.length; i++) {
+                nSpazi.push(listaInc[i].length - listaIncPulita[i].length);
+            }
+
+            //resetto contenuto ul
+            ulInc.innerHTML = "";
+
+            //riempio con numeri spazi
+            for (let i = 0; i < nSpazi.length; i++) {
+                ulInc.innerHTML += "<li>" + nSpazi[i] + "</li>";
+            }
+        }
+    </script>
+</body>
+</html>
+<!--
+Per soluzione: 0 punti se assente, 3 punti se presente tentativo che denota strategia corretta, 4/5 punti se corretto con errori, 6 punti se corretto senza errori
+-->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <p id="paragrafo1">Questo è un paragrafo.</p>
+    <p class="testo">Anche questo è un paragrafo.</p>
+    <div>
+        <ul>
+            <li>Elemento 1</li>
+            <li class="elemento">Elemento 2</li>
+            <li id="elemento3">Elemento 3</li>
+        </ul>
+        <span id="output"></span>
+    </div>
+    <script>
+        function testFunzione() {
+            // questa è da ignorare per l'esercizio 4
+        }
+    </script>
+    <!-- Inizia qui la risposta -->
+    <script>
+        const btn = document.createElement("button");
+        btn.innerHTML = "Wow!";
+        document.body.appendChild(btn); //e qui ho aggiunto il bottone
+
+        btn.addEventListener("click", function() {
+            let listElems = document.getElementsByTagName("li");
+
+            //si potrebbe fare molto più elegantemente con un forEach...
+            for (let i = 0; i < listElems.length; i++) {
+                let text = listElems[i].textContent;
+                listElems[i].innerHTML = "<a href='https://www.w3schools.com'>" + text + "</a>";
+            }
+        })
+    </script>
+    <!-- Termina qui la risposta -->
+</body>
+</html>
+
+<!-- Per valutazione: 1 punto per btn, 2 punti per gestore evento, 3 punti per corretta associazione ascoltatore e gestore (se ci sono errori DOM si scala -0.5 ogni errore) -->
