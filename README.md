@@ -21,7 +21,7 @@ In questo spazio verranno pubblicati materiali didattici, esercizi e compiti ris
 - **HTML**: [W3Schools - HTML Tutorial](https://www.w3schools.com/html/)
 - **CSS**: [W3Schools - CSS Tutorial](https://www.w3schools.com/css/)
 - **JS**: [W3Schools - JS Tutorial](https://www.w3schools.com/js/default.asp)
-- **Node.js**: [W3Schools - Node.js Tutorial](https://www.w3schools.com/nodejs/default.asp) (fino a NPM) + [percorso Microsoft Learn](https://github.com/gianlucapironato/Materiale_TPS_5_2425/blob/main/Node.js%20Microsoft%20Learn.md)
+- **Node.js**: [W3Schools - Node.js Tutorial](https://www.w3schools.com/nodejs/default.asp) (fino a NPM) + [articoli esterni](https://github.com/gianlucapironato/Materiale_TPS_5_2425/blob/main/materiale%20Node.js.md)
 
 ## Contatti
 
