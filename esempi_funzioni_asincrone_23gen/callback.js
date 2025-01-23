@@ -2,9 +2,9 @@ var fs = require('fs');
 
 function fetchUserDataWithCallback(callback) {
     // operazione lenta
-    /*fs.readFile('file.txt', 'utf8', (err, data) => {
+    fs.readFile('file.txt', 'utf8', (err, data) => {
         callback(data);
-    });*/
+    });
     callback("ciao")
 }
 

@@ -3,14 +3,13 @@ var fs = require('fs');
 function fetchUserDataWithPromise() {
     return new Promise((resolve, reject) => {
         // overhead per creazione oggetto promise + operazione lenta
-        /*fs.readFile('file.txt', 'utf8', (err, data) => {
+        fs.readFile('file.txt', 'utf8', (err, data) => {
             if (err) {
                 reject(err);
             } else {
                 resolve(data);
             }
-        });*/
-        resolve("ciao")
+        });
     });
 }
 
