@@ -19,7 +19,7 @@ app.get('/users/:id', (req, res) => {
 });
 
 app.get('/users/', (req, res) => {
-    res.send('Hai inviato id ' + req.params.id + ' tramite query string');
+    res.send('Hai inviato id ' + req.query.id + ' tramite query string');
 });
 
 app.post('/users/', (req, res) => {
