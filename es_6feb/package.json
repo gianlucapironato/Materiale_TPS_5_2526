@@ -1,0 +1,19 @@
+{
+  "name": "esercizio_express",
+  "version": "1.0.0",
+  "description": "Esercizio di ripasso per verifica",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "express",
+    "nodejs"
+  ],
+  "author": "Gianluca Pironato",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

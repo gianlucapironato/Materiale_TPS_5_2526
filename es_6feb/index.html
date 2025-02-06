@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi Lombardia</title>
+</head>
+<body>
+    <h1>Ricerca eventi per provincia</h1>
+    <form action="/eventi/" method="get">
+        <label for="provincia">Scegli la provincia per cui vuoi visualizzare gli eventi:</label>
+        <select name="provincia" id="provincia">
+            <option value="BG">Bergamo</option>
+            <option value="BS">Brescia</option>
+            <option value="CO">Como</option>
+            <option value="CR">Cremona</option>
+            <option value="LC">Lecco</option>
+            <option value="LO">Lodi</option>
+            <option value="MN">Mantova</option>
+            <option value="MI">Milano</option>
+            <option value="MB">Monza e Brianza</option>
+            <option value="PV">Pavia</option>
+            <option value="SO">Sondrio</option>
+            <option value="VA">Varese</option>
+        </select>
+        <input type="submit" value="Ricerca">
+    </form>
+    <hr>
+    <h1>Aggiunta eventi per provincia</h1>
+    <form action="/eventi/" method="post">
+        <label for="titolo">Digita il titolo dell'evento:</label>
+        <input type="text" name="titolo" id="titolo"><br>
+        <label for="data">Scegli la data dell'evento:</label>
+        <input type="date" name="data" id="data"><br>
+        <label for="comune">Digita il comune in cui si terrà l'evento:</label>
+        <input type="text" name="comune" id="comune"><br>   
+        <label for="provincia">Scegli la provincia:</label>
+        <select name="provincia" id="provincia">
+            <option value="BG">Bergamo</option>
+            <option value="BS">Brescia</option>
+            <option value="CO">Como</option>
+            <option value="CR">Cremona</option>
+            <option value="LC">Lecco</option>
+            <option value="LO">Lodi</option>
+            <option value="MN">Mantova</option>
+            <option value="MI">Milano</option>
+            <option value="MB">Monza e Brianza</option>
+            <option value="PV">Pavia</option>
+            <option value="SO">Sondrio</option>
+            <option value="VA">Varese</option>
+        </select>
+        <input type="submit" value="Aggiungi">
+    </form>
+</body>
+</html>
