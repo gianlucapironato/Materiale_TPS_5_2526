@@ -1,0 +1,16 @@
+{
+  "name": "agenda",
+  "version": "1.0.0",
+  "description": "Agenda web eventi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "agenda"
+  ],
+  "author": "Gianluca Pironato",
+  "license": "MIT"
+}

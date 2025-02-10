@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuovo Evento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aggiungi Nuovo Evento</h1>
+        <form action="/eventi/" method="post">
+            <div class="form-group">
+                <label for="title">Titolo:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descrizione:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Ora:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <button type="submit">Aggiungi Evento</button>
+        </form>
+    </div>
+</body>
+</html>
