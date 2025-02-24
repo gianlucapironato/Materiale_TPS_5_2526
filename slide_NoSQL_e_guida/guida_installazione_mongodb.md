@@ -35,7 +35,7 @@ Di seguito le istruzioni per installare MongoDB e la sua shell, Mongosh, su un s
 
 1. **Download di Mongosh**:
     - Visita il [MongoDB Shell (Mongosh) Download Center](https://www.mongodb.com/try/download/shell).
-    - Nel menu a tendina "Platform", seleziona "Windows 64-bit (8.1+) (Zip)".
+    - Nel menu a tendina "Platform", seleziona "Windows 64-bit (Zip)".
     - Clicca su "Download".
 
 2. **Estrazione dei file**:
