@@ -27,7 +27,7 @@ Di seguito le istruzioni per installare MongoDB e la sua shell, Mongosh, su un s
     - Apri il prompt dei comandi come amministratore.
     - Esegui il comando:
       ```shell
-      mkdir C:\mongodb\data\db
+      mkdir C:\data\db
       ```
     - Questo creerà la directory necessaria per i dati di MongoDB.
 
