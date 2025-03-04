@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Web</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('navbar') %>
+    <div class="container">
+        <h1>Agenda Web</h1> 
+        <div class="current-date"><%= Date() %></div>
+        
+        <div class="events-grid">
+            <% data.events.forEach(event => { %>
+                <div class="event-card">
+                    <div class="event-time"><%=event.time%></div>
+                    <div class="event-title"><%=event.title%></div>
+                    <div class="event-description"><%=event.description%></div>
+                </div>
+            <% }); %>
+            
+        </div>
+
+        <a href="/add_event/">
+            <button class="add-button">+</button>
+        </a>
+    </div>
+</body>
+</html>
