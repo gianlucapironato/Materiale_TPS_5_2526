@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Esercizio con fetch() in javascript -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iscritti istituti di istruzione - Lecco</title>
+    <script>
+        loadSchools = async () => {
+            res = await fetch("https://www.dati.lombardia.it/resource/37fy-wnn6.json?$limit=3000")
+            resJson = await res.json()
+            istituti = []
+            comuni = []
+            resJson.forEach(
+                (record)=>{
+                    istituti.push(record.istituto_superiore_c_f_p)
+                    comuni.push(record.comune)
+                }
+            )
+
+            istituti = new Set(istituti)
+            comuni = new Set(comuni)
+
+            document.getElementById("istituto").innerHTML += "<option value=''>Nessuna</option>"
+            istituti.forEach(
+                (ist)=>{
+                    document.getElementById("istituto").innerHTML += "<option value=" + encodeURI(ist) + ">" + ist + "</option>"
+                }
+            )
+
+            document.getElementById("comune").innerHTML += "<option value=''>Nessuna</option>"
+            comuni.forEach(
+                (com)=>{
+                    document.getElementById("comune").innerHTML += "<option value=" + encodeURI(com) + ">" + com + "</option>"
+                }
+            )
+            
+            document.getElementById("divSelectSchool").style.display = "block"
+        }
+        fetchDataForSchool = async (istituto, comune) =>{
+            if (istituto==""){
+                res = await fetch("https://www.dati.lombardia.it/resource/37fy-wnn6.json?comune="+comune)
+            }
+            else if (comune==""){
+                res = await fetch("https://www.dati.lombardia.it/resource/37fy-wnn6.json?istituto_superiore_c_f_p="+istituto)
+            }
+            else {
+                res = await fetch("https://www.dati.lombardia.it/resource/37fy-wnn6.json?istituto_superiore_c_f_p="+istituto+"&comune="+comune)
+            }
+            resJson = await res.json()
+            iscrizioni = ""
+            resJson.forEach(record => {
+                iscrizioni += "<p>" + record.istituto_superiore_c_f_p +  " " + record.tipologia + " " + record.indirizzo + " " + (record.articolazione=="nan"?"":record.articolazione) +  " "  + " " + record.comune + " " + record.anno_scolastico + " " + record.numero_iscritti + "</p>"
+            });
+            document.getElementById("iscrizioni").innerHTML = iscrizioni
+        }
+    </script>
+</head>
+<body>
+    <button onclick="loadSchools()">Carica i dati</button>
+    <div id="divSelectSchool" style="display: none;">
+        <label for="istituto">Istituto:</label>
+        <select name="istituto" id="istituto"></select>
+        <select name="comune" id="comune"></select>
+        <button onclick="fetchDataForSchool(document.getElementById('istituto').value, document.getElementById('comune').value)">Vedi dati iscrizione scuola</button>
+        <span id="iscrizioni"></span>
+    </div>
+</body>
+</html>
