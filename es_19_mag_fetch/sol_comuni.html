@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio comuni</title>
+    <script>
+        async function carica_comuni(){
+            ris = await fetch("https://axqvoqvbfjpaamphztgd.functions.supabase.co/comuni?onlyname=true")
+            testo = await ris.text()
+            testo = '{"comuni":' + testo + '}'
+            document.getElementById("ris_comuni").innerHTML = testo
+        }
+        
+        async function mostra_suggerimenti(iniziali){
+            comuni = JSON.parse(document.getElementById("ris_comuni").innerHTML).comuni
+            opzioni = ""
+            comuni.forEach(
+                (com)=>{
+                    if(com.startsWith(iniziali)){
+                        opzioni += "<option value='" + com + "'>" + com + "</option>"
+                    }
+                }
+            )
+            document.getElementById("opzioni_comuni").innerHTML = opzioni
+        }
+        
+        carica_comuni()
+    </script>
+</head>
+<body>
+    <div id="form_comuni">
+        <input type="text" id="comune" placeholder="Digita le iniziali del comune" list="opzioni_comuni" onkeyup="mostra_suggerimenti(this.value)"/>
+        <datalist id="opzioni_comuni"></datalist>
+    </div>
+    <div id="ris_comuni" style="display:none"></div>
+</body>
+</html>
