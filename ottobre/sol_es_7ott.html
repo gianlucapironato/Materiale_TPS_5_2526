@@ -1,0 +1,39 @@
+<!doctype HTML>
+<html lang="it">
+	<head>
+		<title>Questionario</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form method="post">
+			<span id="sp1">Quanto sei soddisfatto?</span><br>
+			<input type="radio" name="gradimento" id="g1" value="molto soddisfatto" required><label for="g1">Molto soddisfatto</label><br>
+			<input type="radio" name="gradimento" id="g2" value="soddisfatto"><label for="g2">soddisfatto</label><br> 
+			<input type="radio" name="gradimento" id="g3" value="neutrale"><label for="g3">Neutrale</label><br> 
+			<input type="radio" name="gradimento" id="g4" value="insoddisfatto"><label for="g4">Insoddisfatto</label><br> 
+			<input type="radio" name="gradimento" id="g5" value="molto insoddisfatto"><label for="g5">Molto insoddisfatto</label><br>
+
+			<label for="commento">Commenti aggiuntivi:</label><br>
+			<textarea id="commento" cols="50" rows="4" placeholder="non obbligatorio" name="commento"></textarea><br>
+
+			<label for="servizi">Seleziona i servizi usati:</label><br>
+			<select id="servizi" name="servizi" required multiple>
+				<option value="s1">Servizio 1</option>
+				<option value="s2">Servizio 2</option>
+				<option value="s3">Servizio 3</option>
+			</select>
+
+			<label for="quality">Indica la qualità percepito del servizio</label><br>
+			<input type="range" name="quality" id="quality" min="1" max="10" step="1" required><br>
+			
+			<label for="nome">Inserisci il tuo nome:</label><br>
+			<input type="text" name="nome" id="nome" required><br>
+
+			<label for="email">Inserisci il tuo indirizzo di posta elettronica:</label><br>
+			<input type="email" name="email" id="email" required><br>
+
+ 			
+			<input type="submit" value="Invia">
+		</form>
+	</body>
+</html>
