@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout responsive di prova</title>
+    <style>
+        * {
+            box-sizing: border-box; /* il bordo viene conteggiato nella larghezza dell'elemento */
+        }
+        #header {
+            background-color: blueviolet;
+            color: white;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+        #main { /* è lui il flex container più grande */
+            display: flex;
+            flex-wrap: nowrap; /* altrimenti con margine e padding va sidebar a capo su laptop */
+            justify-content: space-between;
+            padding: 10px;
+        }
+        #navBar { /* comodo fare anche lui flex container per disporre le voci del menù in modo adattivo */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* align/justify sono invertite se la direction è column */
+            align-items: center;
+            width: 25%;
+        }
+        #navBar ul { /* necessaria per togliere padding sinistro di default */
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+        }
+        #navBar li {
+            background-color: royalblue;
+            color: white;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #navBar li:hover {
+            background-color: rgb(45, 72, 153);
+        }
+        #mainArticle {  
+            background-color: white;
+            color: black;
+            width: 50%; /* sarebbe da sistemare questa in visualizzazione tablet ... */
+            padding: 10px;
+        }
+        #sideBar {/* comodo fare anche lui flex container per disporre le voci del menù in modo adattivo */
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+        }
+        #footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            padding: 20px;
+        }
+        
+        @media screen and (max-width: 768px) { /* tablet */
+            #main {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            #sideBar {
+                width: 100%;
+            }
+        }
+
+        /* qui sotto metto le media queries che sovrascrivono alcune delle regole sopra in caso di dispositivi più piccoli */
+        @media screen and (max-width: 600px) { /* smartphone */
+            #main {
+                flex-direction: column; /*cambio solo la direzione sul flex container*/
+                align-items: center; /* che prima non serviva sulla riga */
+            }
+            #navBar, #mainArticle, #sideBar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">Header</header>
+    <main id="main">
+        <nav id="navBar">
+            <ul>
+                <li>Option #1</li>
+                <li>Option #2</li>
+                <li>Option #3</li>
+            </ul>
+        </nav> <!-- avrebbe più senso che stesse nell'header, ma risulta più comodo metterla qui per disporla in modo adattivo -->
+        <article id="mainArticle">
+            <h1>Title</h1>
+            <p>Article</p>
+        </article>
+        <aside id="sideBar">
+            <section>
+                <h2>What?</h2>
+                <p>words</p>
+            </section>
+            <section>
+                <h2>Where?</h2>
+                <p>words</p>
+            </section>
+            <section>
+                <h2>How?</h2>
+                <p>words</p>
+            </section>
+        </aside>
+    </main>
+    <footer id="footer">
+        <p>info & contacts</p>
+    </footer>
+</body>
+</html>
