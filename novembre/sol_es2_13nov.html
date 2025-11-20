@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 2</title>
+</head>
+<body>
+    <h1>Numeri dispari:</h1>
+    <p id="dispari"></p>
+    <script>
+         do{
+                 n = parseInt(prompt("Inserisci il numero di stringhe da controllare: "));
+            } while(isNaN(n) || n<=0)
+
+        const stringhe = []
+        for(let j=0;j<n;j++){
+            stringhe.push(prompt("Inserisci la stringa di posto " + j));
+        }
+
+        for(let i=0;i<stringhe.length;i++){
+                if (stringhe[i].length % 2 != 0){
+                    document.getElementById("dispari").innerHTML += stringhe[i] + "<br>";
+                }
+            }
+    </script>
+</body>
+</html>
