@@ -1,0 +1,1 @@
+[Remove elements from a JavaScript array](https://www.geeksforgeeks.org/remove-elements-from-a-javascript-array/)
