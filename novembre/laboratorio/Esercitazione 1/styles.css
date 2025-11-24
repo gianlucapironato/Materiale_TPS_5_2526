@@ -1,0 +1,178 @@
+/* 
+    Stili di Utilità
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-bg: #1f1b24;
+    --color-bg2: #2b2631;
+    --color-text: #fff;
+
+    --color-accent: #7e57c2;
+    --color-text-accent: #fff;
+
+    --color-red: rgba(245, 73, 39, 0.3);
+    --color-yellow: rgba(245, 187, 39, 0.3);
+    --color-green: rgba(39, 245, 115, 0.3);
+    --color-purple: rgba(126, 87, 194, 0.3);
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.red {
+    background-color: var(--color-red) !important;
+}
+
+.yellow {
+    background-color: var(--color-yellow) !important;
+}
+
+.green {
+    background-color: var(--color-green) !important;
+}
+
+.purple {
+    background-color: var(--color-purple) !important;
+}
+
+/* 
+    Stili per il progetto
+*/
+
+.wrapper {
+    margin: auto;
+    max-width: 1280px;
+    text-align: center;
+}
+
+.project-title {
+    margin: auto;
+    background-color: var(--color-accent);
+    color: var(--color-text-accent);
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#user-grades {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 8px;
+    height: 65vh;
+    scrollbar-width: none;
+}
+
+#user-grades li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 521px;
+    list-style: none;
+    text-align: start;
+    background-color: var(--color-bg2);
+    filter: drop-shadow(0px 0px 1px gray);
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 16px;
+
+    transition: .2s all;
+}
+
+#user-grades li:hover {
+    filter: drop-shadow(0px 0px 4px var(--color-accent));
+}
+
+.grade-value {
+    border-radius: 100%;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-accent);
+    aspect-ratio: 1/1;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    line-height: 64px;
+}
+
+#average-grade {
+    margin-top: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+    height: fit-content;
+
+    background-color: var(--color-bg2);
+    color: var(--color-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 16px 32px;
+
+    transition: .2s all;
+}
+
+#average-grade:hover,
+.new-grade-form button:hover {
+    background-color: var(--color-accent);
+}
+
+.new-grade-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 64px;
+    text-align: start;
+}
+
+.new-grade-form input,
+.new-grade-form select {
+    background-color: var(--color-bg2);
+    color: var(--color-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 16px 32px;
+}
+
+.new-grade-form button {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: var(--color-bg2);
+    color: var(--color-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 16px 32px;
+
+    transition: .2s all;
+}
+
+#error-box {
+    color: red;
+}
