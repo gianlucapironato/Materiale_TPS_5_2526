@@ -21,6 +21,7 @@ In questo spazio verranno pubblicati materiali didattici, esercizi e compiti ris
 - **HTML**: [W3Schools - HTML Tutorial](https://www.w3schools.com/html/)
 - **CSS**: [W3Schools - CSS Tutorial](https://www.w3schools.com/css/)
 - **JS**: [W3Schools - JS Tutorial](https://www.w3schools.com/js/default.asp)
+- **Node.js**: [W3Schools - Node.js Tutorial](https://www.w3schools.com/nodejs/default.asp) (sezioni indicate a lezione) + [articoli esterni](https://github.com/gianlucapironato/Materiale_TPS_5_2526/blob/main/materiale%20Node.js.md)
 
 ## Contatti
 
