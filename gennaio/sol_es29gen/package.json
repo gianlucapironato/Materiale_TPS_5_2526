@@ -1,0 +1,16 @@
+{
+  "name": "prova_es29gen",
+  "version": "1.0.0",
+  "description": "Server che permette di filtrare eventi Lombardia",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "server",
+    "nodejs"
+  ],
+  "author": "GP",
+  "license": "MIT"
+}
