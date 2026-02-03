@@ -48,7 +48,8 @@ http.createServer(
             // risposta sarà HTML contenente gli eventi in "provincia"
 
         }
-
-        // gestisco rotte che iniziano con "/eventi/"
+        else{
+            res.end("Pagina non trovata");//in tutti gli altri casi
+        }
     }
 ).listen(8080);
