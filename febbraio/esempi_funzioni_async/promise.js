@@ -13,6 +13,8 @@ function fetchUserDataWithPromise() {
     });
 }
 
+
+
 fetchUserDataWithPromise().then((userData) => {
         console.log("Il contenuto del file:", userData);
     }).catch((err) => {

@@ -8,7 +8,9 @@ function fetchUserDataWithCallback(callback) {
     callback("ciao")
 }
 
-fetchUserDataWithCallback((userData) => {
+fetchUserDataWithCallback(
+    (userData) => {
     console.log("Il contenuto del file:", userData);
-});
+}
+);
 console.log("dopo") // questo viene eseguito prima della callback (se davvero l'operazione è lenta)
