@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Agenda Personale - Aggiungi Appuntamento</title>
+	<link rel="stylesheet" href="public/style.css">
+	<style>
+		body{font-family:Segoe UI, Roboto, Arial; padding:24px}
+		.container{max-width:720px;margin:0 auto}
+		form{display:grid;gap:10px;background:#fff;padding:16px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+		label{font-weight:600}
+		input,textarea,button{font-size:14px;padding:8px;border:1px solid #ccc;border-radius:4px}
+		.row{display:flex;gap:8px}
+		.row > *{flex:1}
+		#appointments{margin-top:16px}
+		.card{padding:10px;border-radius:6px;background:#f8f8f8;margin-bottom:8px}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Aggiungi Appuntamento</h1>
+
+		<form id="appointmentForm" action="/AggiuntaAppuntamento" method="post">
+			<div>
+				<label for="title">Titolo</label>
+				<input id="title" name="title" type="text" required placeholder="Titolo appuntamento">
+			</div>
+
+			<div class="row">
+				<div>
+					<label for="date">Data</label>
+					<input id="date" name="date" type="date" required>
+				</div>
+				<div>
+					<label for="time">Ora</label>
+					<input id="time" name="time" type="time" required>
+				</div>
+			</div>
+
+			<div>
+				<label for="description">Descrizione</label>
+				<textarea id="description" name="description" rows="4" placeholder="Dettagli..."></textarea>
+			</div>
+
+			<div>
+				<button type="submit">Salva Appuntamento</button>
+			</div>
+		</form>
+
+		<section id="appointments">
+			<h2>Appuntamenti salvati</h2>
+			<div id="list"></div>
+		</section>
+	</div>
+
+
+</body>
+</html>
