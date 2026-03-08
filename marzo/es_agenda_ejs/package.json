@@ -1,0 +1,15 @@
+{
+  "name": "agendapersonale",
+  "version": "1.0.0",
+  "description": "compito riguardo l'agenda personale",
+  "license": "ISC",
+  "author": "EP",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

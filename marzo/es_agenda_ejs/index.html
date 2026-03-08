@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nuovo Appuntamento</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Nuovo Appuntamento</h1>
+		<h3><a href="/" style="color: var(--accent-dim); text-decoration: none;">← Torna all'agenda</a></h3>
+	</header>
+
+	<div class="container">
+		<div class="form-wrapper">
+			<h2>Aggiungi un evento</h2>
+
+			<form action="/AggiuntaAppuntamento/" method="POST">
+				<label for="title">Titolo</label>
+				<input type="text" id="title" name="title" placeholder="es. Riunione con il team" required>
+
+				<label for="date">Data</label>
+				<input type="date" id="date" name="date" required>
+
+				<label for="time">Ora</label>
+				<input type="time" id="time" name="time" required>
+
+				<label for="description">Note</label>
+				<textarea id="description" name="description" placeholder="Dettagli opzionali..."></textarea>
+
+				<div class="form-submit">
+					<button type="submit">Salva appuntamento</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
