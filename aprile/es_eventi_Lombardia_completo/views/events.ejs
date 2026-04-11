@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi provincia</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <table>
+        <tr><th>Titolo</th><th>Comune</th><th>Data</th></tr>
+        <% data.events.forEach( (event)=>{ %>
+            <tr><td><%= event.titolo %></td><td><%= event.comune %></td><td><%= event.data %></td></tr>
+        <% }) %>
+    </table>
+</body>
+</html>
